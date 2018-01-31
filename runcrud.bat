@@ -1,7 +1,7 @@
 call mvn clean package
 if "%ERRORLEVEL%" == "0" goto rename
 echo.
-echo MAven BUILD has errors - breaking work
+echo Maven BUILD has errors - breaking work
 goto fail
 
 :rename
@@ -23,6 +23,12 @@ goto fail
 :runtomcat
 call %CATALINA_HOME%\bin\startup.bat
 goto end
+
+:startfirefox
+START "firefox" /HIGH /MIN  "C:\Program Files (x86)\Mozilla Firefox\firefox.exe http://localhost:8080/v1/task/getTasks"
+if "%ERRORLEVEL%" == "0" goto end
+echo Cannot open firefox
+goto fail
 
 :fail
 echo.
