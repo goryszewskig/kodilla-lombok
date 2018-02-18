@@ -12,7 +12,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.web.client.RestTemplate;
 
-import javax.print.URIException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
