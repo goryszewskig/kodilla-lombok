@@ -105,7 +105,7 @@ public class TrelloFacadeTest {
         assertThat(trelloBoardDtos.get(0).getLists().get(0), hasProperty("id", equalTo("1")));
         assertThat(trelloBoardDtos.get(0).getLists().get(0), hasProperty("name", equalTo("my_list")));
 
-        assertThat(trelloBoardDtos, samePropertyValuesAs(trelloBoards)); // <<-- nice one!
+        assertThat(trelloBoardDtos, samePropertyValuesAs(trelloBoards));
 
         assertFalse(trelloBoardDtos.get(0).getLists().get(0).isClosed());
     }
